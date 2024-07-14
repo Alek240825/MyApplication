@@ -19,6 +19,7 @@ nombre = "Pedro"  // Se permite cambiar el valor
 // Variable inmutable
 val apellido: String = "Pérez"
 // apellido = "García"  // No se permite cambiar el valor, esto causará un error de compilación
+```
 
 ## Constantes en Kotlin
 
@@ -26,11 +27,13 @@ En Kotlin, se pueden definir constantes utilizando la palabra clave **`const`**.
 
 ### Ejemplo
 
+```kotlin
 const val PI = 3.14159
 
 fun main() {
     println("El valor de PI es $PI")
 }
+```
 
 ## Manejo de Nulos
 
@@ -38,6 +41,7 @@ Kotlin tiene un sistema de tipos que ayuda a manejar los valores nulos de manera
 
 ### Ejemplos
 
+```kotlin
 // Variable que puede ser nula
 var nombre: String? = "Juan"
 nombre = null  // Esto es permitido
@@ -50,6 +54,7 @@ val longitud = nombre?.length ?: 0  // Si nombre es null, asigna 0 a longitud
 
 // Not-null assertion
 println(nombre!!.length)  // Lanza una excepción si nombre es null
+```
 
 ## Opción (Option Type)
 
@@ -57,6 +62,7 @@ En Kotlin, el tipo de datos **`Option`** no existe como tal, pero se puede emula
 
 ### Ejemplos
 
+```kotlin
 fun getNombreCompleto(nombre: String?, apellido: String?): String {
     return "${nombre ?: "Nombre no proporcionado"} ${apellido ?: "Apellido no proporcionado"}"
 }
@@ -65,3 +71,4 @@ fun main() {
     val nombreCompleto = getNombreCompleto("Juan", null)
     println(nombreCompleto)  // Imprime "Juan Apellido no proporcionado"
 }
+```
